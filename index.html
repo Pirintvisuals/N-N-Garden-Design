@@ -87,6 +87,7 @@
     /* ── HERO ── */
     #hero {
       display: flex; height: 100vh; overflow: hidden;
+      background: var(--gd);
     }
     .hero-left {
       background: var(--gd);
@@ -336,8 +337,8 @@
     @media (max-width:1023px) {
       #hero { flex-direction:column; min-height:auto; }
       .hero-left { width:100%; clip-path:none; padding:4rem 2rem 3.5rem; }
-      .hero-right { margin-left:0; height:340px; }
-      .hero-right img { height:340px; }
+      .hero-right { margin-left:0; height:55vw; min-height:280px; max-height:480px; }
+      .hero-right img { width:100%; height:100%; object-fit:cover; }
       .about-grid { grid-template-columns:1fr; gap:3rem; }
       .about-badge { left:1rem; }
       .process-grid { grid-template-columns:repeat(2,1fr); }
