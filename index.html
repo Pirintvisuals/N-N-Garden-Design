@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>N&N Garden Design | Greater Manchester's Landscaping Specialists | 10 Years Experience</title>
+  <meta name="description" content="N&N Garden Design — 10 years of expert decking, driveways, paving, fencing and full garden transformations across Greater Manchester. Free quotes.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,900&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="chat-assets/index-DSQhMxhr.css">
+  <style>
+    :root {
+      --gd:    #152E17;
+      --gm:    #1E4220;
+      --ga:    #2E7031;
+      --gb:    #3E9C41;
+      --ow:    #F5F6F3;
+      --td:    #111;
+      --tm:    #444;
+      --tl:    #888;
+      --border:#E2E4DF;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Outfit', sans-serif; color: var(--td); background: #fff; -webkit-font-smoothing: antialiased; line-height: 1.65; }
+    h1, h2, h3, h4 { font-family: 'Fraunces', serif; line-height: 1.1; }
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; }
+    ul { list-style: none; }
+
+    /* ── TOP BAR ── */
+    #topbar {
+      background: var(--gd);
+      padding: .36rem 0;
+      font-size: .72rem;
+      color: rgba(255,255,255,.65);
+    }
+    .tb-inner {
+      max-width: 1300px; margin: 0 auto; padding: 0 2rem;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .tb-inner a { color: rgba(255,255,255,.65); transition: color .2s; }
+    .tb-inner a:hover { color: #fff; }
+    .tb-right { display: flex; gap: 1.5rem; }
+
+    /* ── NAV ── */
+    #nav {
+      background: #fff;
+      position: sticky; top: 0; z-index: 300;
+      border-bottom: 1px solid var(--border);
+      transition: box-shadow .3s;
+    }
+    #nav.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,.08); border-bottom-color: transparent; }
+    .nav-inner {
+      max-width: 1300px; margin: 0 auto; padding: 0 2rem;
+      height: 90px; display: flex; align-items: center; gap: 2rem;
+    }
+    .nav-logo { height: 82px; width: auto; object-fit: contain; flex-shrink: 0; }
+    .nav-links {
+      flex: 1; display: flex; align-items: center; justify-content: center; gap: .1rem;
+    }
+    .nav-links a {
+      color: var(--tm); font-size: .78rem; font-weight: 500; letter-spacing: .04em;
+      padding: .4rem .9rem; border-radius: 4px;
+      transition: color .18s, background .18s; white-space: nowrap;
+    }
+    .nav-links a:hover { color: var(--ga); background: rgba(46,112,49,.07); }
+    .nav-right { display: flex; align-items: center; gap: .85rem; flex-shrink: 0; }
+    .nav-tel {
+      color: var(--td); font-weight: 700; font-size: .92rem;
+      display: flex; align-items: center; gap: .38rem; white-space: nowrap;
+    }
+    .nav-tel svg { color: var(--ga); }
+    .nav-tel:hover { color: var(--ga); }
+    .btn-primary {
+      background: var(--gd); color: #fff;
+      font-family: 'Poppins', sans-serif; font-weight: 600; font-size: .82rem;
+      padding: .58rem 1.3rem; border-radius: 6px; white-space: nowrap;
+      border: none; cursor: pointer; transition: background .2s, transform .18s;
+      display: inline-flex; align-items: center; gap: .4rem; letter-spacing: .01em;
+    }
+    .btn-primary:hover { background: var(--gm); transform: translateY(-1px); }
+
+    /* ── HERO ── */
+    #hero {
+      display: flex; height: 100vh; overflow: hidden;
+    }
+    .hero-left {
+      background: var(--gd);
+      width: 60%; flex-shrink: 0;
+      display: flex; flex-direction: column; justify-content: center;
+      padding: 3.5rem 6rem 3.5rem 4.5rem;
+      clip-path: polygon(0 0, 100% 0, 82% 100%, 0 100%);
+      position: relative; z-index: 2;
+    }
+    .hero-right {
+      flex: 1; overflow: hidden; margin-left: -7%; position: relative;
+    }
+    .hero-right img {
+      width: 100%; height: 100%; object-fit: cover; object-position: center 20%;
+    }
+    .hero-right::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(to right, rgba(21,46,23,.45) 0%, transparent 35%);
+    }
+    .hero-exp-pill {
+      display: inline-flex; align-items: center; gap: .45rem;
+      background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.2);
+      border-radius: 4px; padding: .3rem 1rem;
+      font-size: .65rem; font-weight: 600; letter-spacing: .15em; text-transform: uppercase;
+      color: rgba(255,255,255,.7); width: fit-content; margin-bottom: .75rem;
+      font-family: 'Outfit', sans-serif;
+    }
+    .hero-exp-pill span { color: var(--gb); }
+    .hero-loc {
+      font-size: .7rem; font-weight: 500; letter-spacing: .18em;
+      text-transform: uppercase; color: rgba(255,255,255,.42); margin-bottom: .6rem;
+      font-family: 'Outfit', sans-serif;
+    }
+    .hero-h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: clamp(2.6rem, 4.5vw, 4.6rem);
+      color: #fff;
+      line-height: 1.06;
+      letter-spacing: -.02em;
+      margin-bottom: 1.2rem;
+    }
+    .hero-h1 em {
+      font-style: normal;
+      font-weight: 600;
+      color: var(--gb);
+    }
+    .hero-rule { width: 36px; height: 2px; background: var(--gb); opacity: .6; margin-bottom: .9rem; }
+    .hero-sub {
+      color: rgba(255,255,255,.6); font-size: .92rem; line-height: 1.8;
+      margin-bottom: 1.25rem; max-width: 420px; font-weight: 300;
+    }
+    .hero-ctas { display: flex; gap: .85rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+    .btn-hero-primary {
+      background: #fff; color: var(--gd);
+      font-family: 'Outfit',sans-serif; font-weight: 600; font-size: .8rem;
+      padding: .75rem 1.6rem; border-radius: 4px; letter-spacing: .05em; text-transform: uppercase;
+      display: inline-flex; align-items: center; gap: .4rem;
+      transition: background .2s, transform .18s;
+    }
+    .btn-hero-primary:hover { background: #f0f5f0; transform: translateY(-2px); }
+    .btn-hero-outline {
+      border: 1px solid rgba(255,255,255,.35); color: rgba(255,255,255,.85);
+      font-family: 'Outfit',sans-serif; font-weight: 500; font-size: .8rem;
+      padding: .75rem 1.6rem; border-radius: 4px; letter-spacing: .05em; text-transform: uppercase;
+      display: inline-flex; align-items: center; gap: .4rem;
+      transition: border-color .2s, background .2s;
+    }
+    .btn-hero-outline:hover { border-color: rgba(255,255,255,.7); background: rgba(255,255,255,.07); }
+    .hero-stat-row {
+      display: flex; gap: 2.5rem;
+      padding-top: 1.75rem; border-top: 1px solid rgba(255,255,255,.1);
+    }
+    .hero-stat-num {
+      font-family: 'Fraunces',serif; font-size: 2rem; font-weight: 700;
+      color: #fff; line-height: 1; letter-spacing: -.02em;
+    }
+    .hero-stat-label { font-size: .65rem; color: rgba(255,255,255,.42); font-weight: 500; margin-top: .35rem; letter-spacing: .08em; text-transform: uppercase; }
+
+    /* ── STATS BAR ── */
+    #stats-bar { background: var(--gm); padding: 2rem 0; }
+    .stats-inner {
+      max-width: 1300px; margin: 0 auto; padding: 0 2rem;
+      display: grid; grid-template-columns: repeat(4,1fr); text-align: center;
+    }
+    .stat-item { padding: .5rem; }
+    .stat-item + .stat-item { border-left: 1px solid rgba(255,255,255,.1); }
+    .stat-num {
+      font-family: 'Fraunces',serif; font-size: 2.6rem; font-weight: 700;
+      color: #fff; line-height: 1; letter-spacing: -.03em;
+    }
+    .stat-sub { font-size: .65rem; color: rgba(255,255,255,.45); margin-top: .4rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; }
+
+    /* ── SHARED ── */
+    .s-label { font-family:'Outfit',sans-serif; font-size:.65rem; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:var(--ga); margin-bottom:.6rem; }
+    .s-label-light { color:rgba(255,255,255,.4); }
+    .s-h2 { font-family:'Fraunces',serif; font-size:clamp(2rem,3vw,2.8rem); font-weight:700; color:var(--gd); }
+    .s-h2-white { color:#fff; }
+    .s-p { color:var(--tm); font-size:.92rem; line-height:1.75; margin-top:.65rem; }
+    .container { max-width:1300px; margin:0 auto; padding:0 2rem; }
+    .section { padding:5rem 0; }
+    .section-alt { background:var(--ow); }
+    .section-dark { background:var(--gd); }
+
+    /* ── SERVICES ── */
+    .srv-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.2rem; margin-top:3rem; }
+    .srv-card {
+      border:1.5px solid var(--border); border-radius:8px; padding:2rem 1.75rem;
+      position:relative; overflow:hidden; transition:box-shadow .28s, transform .28s, border-color .28s;
+      background:#fff;
+    }
+    .srv-card::before {
+      content:''; position:absolute; top:0; left:0; right:0; height:3px;
+      background:linear-gradient(90deg,var(--ga),var(--gb));
+      transform:scaleX(0); transform-origin:left; transition:transform .32s ease;
+    }
+    .srv-card:hover::before { transform:scaleX(1); }
+    .srv-card:hover { box-shadow:0 10px 36px rgba(0,0,0,.09); transform:translateY(-4px); border-color:transparent; }
+    .srv-icon {
+      width:48px; height:48px; background:rgba(46,112,49,.09); border-radius:9px;
+      display:flex; align-items:center; justify-content:center; margin-bottom:1.1rem;
+    }
+    .srv-icon svg { width:24px; height:24px; stroke:var(--ga); fill:none; stroke-width:1.8; }
+    .srv-name { font-family:'Fraunces',serif; font-size:1.15rem; font-weight:700; color:var(--gd); margin-bottom:.4rem; letter-spacing:-.01em; }
+    .srv-desc { font-size:.84rem; color:var(--tm); line-height:1.68; }
+    .srv-link { display:inline-flex; align-items:center; gap:.3rem; margin-top:.85rem; font-size:.78rem; font-weight:600; color:var(--ga); transition:gap .18s; }
+    .srv-link:hover { gap:.5rem; }
+
+    /* ── ABOUT ── */
+    .about-grid { display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:center; }
+    .about-img-wrap { position:relative; border-radius:10px; overflow:hidden; }
+    .about-img-wrap img { width:100%; height:500px; object-fit:cover; object-position:center 30%; }
+    .about-badge {
+      position:absolute; bottom:1.75rem; left:-1.25rem;
+      background:var(--gd); color:#fff; border-radius:8px;
+      padding:1.1rem 1.4rem; box-shadow:0 8px 28px rgba(0,0,0,.22); text-align:center; min-width:130px;
+    }
+    .about-badge-num {
+      font-family:'Fraunces',serif; font-size:2.8rem; font-weight:700; line-height:1; letter-spacing:-.04em;
+      background:linear-gradient(135deg,#fff 0%,rgba(255,255,255,.7) 100%);
+      -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+    }
+    .about-badge-text { font-size:.68rem; font-weight:600; color:rgba(255,255,255,.6); text-transform:uppercase; letter-spacing:.06em; margin-top:.2rem; }
+    .about-list { margin-top:1.75rem; display:flex; flex-direction:column; gap:.8rem; }
+    .about-item { display:flex; align-items:flex-start; gap:.8rem; }
+    .about-dot {
+      width:20px; height:20px; border-radius:50%; background:rgba(46,112,49,.1);
+      display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:2px;
+    }
+    .about-dot svg { width:11px; height:11px; stroke:var(--ga); fill:none; stroke-width:2.5; }
+    .about-item-text { font-size:.875rem; color:var(--tm); line-height:1.65; }
+    .about-cta-row { display:flex; gap:.8rem; margin-top:2.25rem; flex-wrap:wrap; }
+    .btn-dark { background:var(--gd); color:#fff; font-family:'Outfit',sans-serif; font-weight:600; font-size:.83rem; padding:.68rem 1.5rem; border-radius:6px; display:inline-flex; align-items:center; gap:.4rem; transition:background .2s, transform .18s; }
+    .btn-dark:hover { background:var(--gm); transform:translateY(-2px); }
+    .btn-outline-dark { border:1.5px solid var(--gd); color:var(--gd); font-family:'Outfit',sans-serif; font-weight:600; font-size:.83rem; padding:.65rem 1.45rem; border-radius:6px; display:inline-flex; align-items:center; gap:.4rem; transition:background .2s, color .2s, transform .18s; }
+    .btn-outline-dark:hover { background:var(--gd); color:#fff; transform:translateY(-2px); }
+
+    /* ── WHY ── */
+    .why-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:1.2rem; margin-top:3rem; }
+    .why-card { padding:2rem 1.6rem; border-radius:8px; background:#fff; border:1.5px solid var(--border); transition:box-shadow .25s, transform .25s; }
+    .why-card:hover { box-shadow:0 8px 28px rgba(0,0,0,.08); transform:translateY(-4px); }
+    .why-icon { width:48px; height:48px; border-radius:9px; background:rgba(46,112,49,.09); display:flex; align-items:center; justify-content:center; margin-bottom:1rem; }
+    .why-icon svg { width:22px; height:22px; stroke:var(--ga); fill:none; stroke-width:1.8; }
+    .why-title { font-family:'Fraunces',serif; font-size:1.1rem; font-weight:700; color:var(--gd); margin-bottom:.45rem; letter-spacing:-.01em; }
+    .why-text { font-size:.835rem; color:var(--tm); line-height:1.68; }
+
+    /* ── PROCESS ── */
+    .process-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:1.5rem; margin-top:3rem; position:relative; }
+    .process-grid::before { content:''; position:absolute; top:2rem; left:calc(12.5% + .5rem); right:calc(12.5% + .5rem); height:1px; background:rgba(255,255,255,.12); z-index:0; }
+    .process-card { text-align:center; padding:1.25rem .75rem; position:relative; z-index:1; }
+    .process-num { width:52px; height:52px; border-radius:50%; background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.15); display:flex; align-items:center; justify-content:center; font-family:'Fraunces',serif; font-size:1.3rem; font-weight:700; color:#fff; margin:0 auto 1.1rem; letter-spacing:-.02em; }
+    .process-title { font-family:'Fraunces',serif; font-size:1.05rem; font-weight:700; color:#fff; margin-bottom:.45rem; letter-spacing:-.01em; }
+    .process-text { font-size:.82rem; color:rgba(255,255,255,.55); line-height:1.7; }
+
+    /* ── BEFORE / AFTER ── */
+    .ba-grid { display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center; }
+    .ba-imgs { display:grid; grid-template-columns:1fr 1fr; gap:6px; border-radius:8px; overflow:hidden; }
+    .ba-img { position:relative; overflow:hidden; }
+    .ba-img img { width:100%; height:270px; object-fit:cover; display:block; transition:transform .4s; }
+    .ba-img:hover img { transform:scale(1.03); }
+    .ba-lbl { position:absolute; top:.6rem; left:.6rem; background:rgba(0,0,0,.52); color:#fff; font-size:.6rem; font-weight:700; letter-spacing:.09em; text-transform:uppercase; padding:.18rem .52rem; border-radius:3px; }
+    .ba-cl { font-size:.67rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--ga); margin-bottom:.4rem; }
+    .ba-ct { font-size:.9rem; color:var(--tm); line-height:1.73; margin-bottom:1.6rem; }
+    .ba-rev { background:#fff; border-left:3px solid var(--ga); padding:1.15rem 1.4rem; border-radius:0 6px 6px 0; box-shadow:0 2px 14px rgba(0,0,0,.06); }
+    .ba-q { font-size:.88rem; color:var(--td); font-style:italic; line-height:1.65; margin-bottom:.55rem; }
+    .ba-who { font-size:.76rem; font-weight:600; color:var(--tm); }
+    .ba-nav { display:flex; gap:.55rem; margin-top:1.6rem; align-items:center; }
+    .ba-btn { width:40px; height:40px; border-radius:50%; border:1.5px solid var(--gd); background:transparent; display:flex; align-items:center; justify-content:center; cursor:pointer; color:var(--gd); transition:background .2s, color .2s; }
+    .ba-btn:hover { background:var(--gd); color:#fff; }
+    .ba-counter { font-size:.78rem; color:var(--tl); font-weight:500; margin-left:.3rem; }
+    .ba-view-link { display:inline-flex; align-items:center; gap:.35rem; font-size:.8rem; font-weight:600; color:var(--ga); margin-left:auto; }
+    .ba-view-link:hover { text-decoration:underline; }
+
+    /* ── AREAS ── */
+    .areas-grid { display:flex; flex-wrap:wrap; gap:.55rem; margin-top:2.25rem; }
+    .area-pill { border:1.5px solid var(--border); border-radius:50px; padding:.38rem 1rem; font-size:.8rem; color:var(--tm); font-weight:500; transition:border-color .18s, color .18s, background .18s; }
+    .area-pill:hover { border-color:var(--ga); color:var(--ga); background:rgba(46,112,49,.05); }
+
+    /* ── TESTIMONIALS ── */
+    .testi-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.2rem; margin-top:3rem; }
+    .testi-card { background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.1); border-radius:8px; padding:1.85rem 1.7rem; transition:background .25s, transform .25s; }
+    .testi-card:hover { background:rgba(255,255,255,.1); transform:translateY(-4px); }
+    .testi-quote-mark { font-family:'Fraunces',serif; font-size:2.8rem; color:var(--gb); line-height:1; margin-bottom:.4rem; opacity:.55; }
+    .testi-q { color:rgba(255,255,255,.8); font-size:.88rem; line-height:1.72; margin-bottom:1.35rem; font-style:italic; }
+    .testi-name { color:#fff; font-weight:700; font-size:.83rem; }
+    .testi-loc { color:rgba(255,255,255,.38); font-size:.73rem; margin-top:.12rem; }
+
+    /* ── FAQ ── */
+    .faq-grid { display:grid; grid-template-columns:1fr 1fr; gap:.9rem; margin-top:3rem; }
+    .faq-item { background:#fff; border:1.5px solid var(--border); border-radius:8px; overflow:hidden; }
+    .faq-q { width:100%; text-align:left; background:none; border:none; cursor:pointer; display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:1.2rem 1.4rem; font-family:'Fraunces',serif; font-size:.96rem; font-weight:700; color:var(--gd); }
+    .faq-q svg { flex-shrink:0; transition:transform .3s; color:var(--ga); }
+    .faq-item.open .faq-q svg { transform:rotate(45deg); }
+    .faq-a { max-height:0; overflow:hidden; transition:max-height .35s ease, padding .35s; font-size:.855rem; color:var(--tm); line-height:1.72; padding:0 1.4rem; }
+    .faq-item.open .faq-a { max-height:300px; padding:0 1.4rem 1.2rem; }
+
+    /* ── CTA BAND ── */
+    #cta-band { background:var(--ga); padding:4.5rem 0; text-align:center; }
+    #cta-band h2 { font-size:clamp(1.75rem,3vw,2.5rem); color:#fff; margin-bottom:.6rem; }
+    #cta-band p { color:rgba(255,255,255,.82); font-size:.92rem; margin-bottom:1.85rem; }
+    .btn-cta-big { display:inline-flex; align-items:center; gap:.55rem; background:#fff; color:var(--gd); font-family:'Outfit',sans-serif; font-weight:700; font-size:1.05rem; padding:.85rem 2.5rem; border-radius:6px; transition:transform .18s, box-shadow .18s; }
+    .btn-cta-big:hover { transform:translateY(-2px); box-shadow:0 8px 28px rgba(0,0,0,.16); }
+
+    /* ── FOOTER ── */
+    #footer { background:#0C1F0D; padding:4.5rem 0 2rem; }
+    .ft-grid { display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:3rem; margin-bottom:3.5rem; }
+    .ft-logo-box { display:inline-block; background:rgba(255,255,255,.96); border-radius:8px; padding:.5rem .75rem; margin-bottom:1.1rem; }
+    .ft-logo { height:60px; width:auto; object-fit:contain; display:block; }
+    .ft-tag { color:rgba(255,255,255,.42); font-size:.84rem; line-height:1.72; max-width:270px; }
+    .ft-h { color:rgba(255,255,255,.9); font-size:.7rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; margin-bottom:.95rem; }
+    .ft-ul li { margin-bottom:.45rem; }
+    .ft-ul a { color:rgba(255,255,255,.42); font-size:.845rem; transition:color .2s; }
+    .ft-ul a:hover { color:rgba(255,255,255,.88); }
+    .ft-line { display:block; margin-bottom:.4rem; color:rgba(255,255,255,.42); font-size:.845rem; }
+    .ft-line a { color:rgba(255,255,255,.42); transition:color .2s; }
+    .ft-line a:hover { color:rgba(255,255,255,.88); }
+    .ft-bot { border-top:1px solid rgba(255,255,255,.07); padding-top:1.4rem; display:flex; justify-content:space-between; align-items:center; }
+    .ft-copy { color:rgba(255,255,255,.25); font-size:.73rem; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width:1199px) {
+      .why-grid { grid-template-columns:repeat(2,1fr); }
+      .ft-grid { grid-template-columns:1fr 1fr; }
+    }
+    @media (max-width:1023px) {
+      #hero { flex-direction:column; min-height:auto; }
+      .hero-left { width:100%; clip-path:none; padding:4rem 2rem 3.5rem; }
+      .hero-right { margin-left:0; height:340px; }
+      .hero-right img { height:340px; }
+      .about-grid { grid-template-columns:1fr; gap:3rem; }
+      .about-badge { left:1rem; }
+      .process-grid { grid-template-columns:repeat(2,1fr); }
+      .process-grid::before { display:none; }
+      .ba-grid { grid-template-columns:1fr; gap:2.5rem; }
+      .testi-grid { grid-template-columns:1fr; }
+      .faq-grid { grid-template-columns:1fr; }
+      .stats-inner { grid-template-columns:repeat(2,1fr); }
+      .srv-grid { grid-template-columns:repeat(2,1fr); }
+    }
+    @media (max-width:639px) {
+      .nav-links { display:none; }
+      .nav-logo { height:62px; }
+      .nav-inner { height:70px; }
+      .why-grid { grid-template-columns:1fr; }
+      .ft-grid { grid-template-columns:1fr; }
+      .srv-grid { grid-template-columns:1fr; }
+      .hero-stat-row { gap:1.25rem; }
+      .process-grid { grid-template-columns:1fr; }
+      .ft-bot { flex-direction:column; gap:.5rem; text-align:center; }
+    }
+
+    /* Motion One — initial hidden states for animated elements */
+    .m-hidden { opacity: 0; }
+  </style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div id="topbar">
+  <div class="tb-inner">
+    <span>10 Years Trusted in Greater Manchester. Decking, Driveways &amp; Full Garden Makeovers</span>
+    <div class="tb-right">
+      <a href="mailto:norbertliska74@gmail.com">norbertliska74@gmail.com</a>
+      <a href="tel:+447435725296">+44 7435 725296</a>
+    </div>
+  </div>
+</div>
+
+<!-- NAV -->
+<header id="nav">
+  <div class="nav-inner">
+    <a href="index.html"><img src="logo.jpg" alt="N&N Garden Design" class="nav-logo"></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="case-studies.html">Case Studies</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#areas">Areas</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="tel:+447435725296" class="nav-tel">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 6.29 6.29l1.63-1.63a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        +44 7435 725296
+      </a>
+      <a href="#cta-band" class="btn-primary">Free Quote</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-left">
+    <h1 class="hero-h1" id="h-head">Landscaping &amp;<br><em>Garden Design</em><br>Specialists in Greater Manchester</h1>
+    <div class="hero-rule" id="h-rule"></div>
+    <p class="hero-sub" id="h-sub">A decade of transforming gardens across Greater Manchester. Decking, driveways, patios, pergolas and full makeovers. Built right, finished properly, every time.</p>
+    <div class="hero-ctas" id="h-ctas">
+      <a href="#cta-band" class="btn-hero-primary">Book Free Consultation</a>
+      <a href="case-studies.html" class="btn-hero-outline">See Our Work</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <img src="668488593_1846699913408849_7913270093042994466_n.jpg" alt="Garden transformation by N&N Garden Design" fetchpriority="high">
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<div id="stats-bar">
+  <div class="stats-inner">
+    <div class="stat-item m-hidden">
+      <div class="stat-num" data-count="10" data-suffix="+">0</div>
+      <div class="stat-sub">Years in the Trade</div>
+    </div>
+    <div class="stat-item m-hidden">
+      <div class="stat-num" data-count="500" data-suffix="+">0</div>
+      <div class="stat-sub">Projects Delivered</div>
+    </div>
+    <div class="stat-item m-hidden">
+      <div class="stat-num" data-count="20" data-suffix="+">0</div>
+      <div class="stat-sub">Manchester Areas</div>
+    </div>
+    <div class="stat-item m-hidden">
+      <div class="stat-num" data-prefix="£" data-count="0" data-suffix="">0</div>
+      <div class="stat-sub">Hidden Costs. Ever.</div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services" class="section">
+  <div class="container">
+    <div class="m-hidden" id="srv-head">
+      <p class="s-label">What We Offer</p>
+      <h2 class="s-h2">Services Built on a Decade of Craft</h2>
+      <p class="s-p" style="max-width:520px;">Every service refined over 10 years of real projects. No guesswork. Just quality work, done properly.</p>
+    </div>
+    <div class="srv-grid">
+      <div class="srv-card m-hidden">
+        <div class="srv-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="1"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></div>
+        <p class="srv-name">Decking</p>
+        <p class="srv-desc">Composite and hardwood decking built for the long term. Solid sub-frame, precision finish, built to handle whatever Manchester weather throws at it.</p>
+        <a href="#cta-band" class="srv-link">Get a quote <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></a>
+      </div>
+      <div class="srv-card m-hidden">
+        <div class="srv-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <p class="srv-name">Driveways</p>
+        <p class="srv-desc">Block paving, resin bound and tarmac driveways. Proper excavation, proper drainage, proper sub-base. No shortcuts that cost you later.</p>
+        <a href="#cta-band" class="srv-link">Get a quote <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></a>
+      </div>
+      <div class="srv-card m-hidden">
+        <div class="srv-icon"><svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div>
+        <p class="srv-name">Flagging &amp; Paving</p>
+        <p class="srv-desc">Natural stone, porcelain and concrete flagging laid flat and level. Patios and pathways finished to be proud of.</p>
+        <a href="#cta-band" class="srv-link">Get a quote <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></a>
+      </div>
+      <div class="srv-card m-hidden">
+        <div class="srv-icon"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><line x1="5" y1="6" x2="19" y2="6"/><line x1="5" y1="18" x2="19" y2="18"/></svg></div>
+        <p class="srv-name">Fencing &amp; Pergolas</p>
+        <p class="srv-desc">Featherboard, panel and close-board fencing. Bespoke timber and metal pergolas and summer houses built to your spec.</p>
+        <a href="#cta-band" class="srv-link">Get a quote <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></a>
+      </div>
+      <div class="srv-card m-hidden">
+        <div class="srv-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <p class="srv-name">Turfing &amp; Artificial Grass</p>
+        <p class="srv-desc">Real turf on a prepared base, or premium artificial grass fitted to look and feel natural. Low maintenance, high impact.</p>
+        <a href="#cta-band" class="srv-link">Get a quote <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></a>
+      </div>
+      <div class="srv-card m-hidden">
+        <div class="srv-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+        <p class="srv-name">Full Garden Makeovers</p>
+        <p class="srv-desc">Complete transformations from design to handover. One team, one fixed quote, zero subcontracting. We own every part of the project.</p>
+        <a href="#cta-band" class="srv-link">Get a quote <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section section-alt">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img-wrap m-hidden" id="about-img">
+        <img src="489075604_1515626939849483_4061788434147143286_n.jpg" alt="N&N Garden Design Greater Manchester" loading="lazy">
+        <div class="about-badge">
+          <div class="about-badge-num">10</div>
+          <div class="about-badge-text">Years of<br>Experience</div>
+        </div>
+      </div>
+      <div class="about-content m-hidden" id="about-text">
+        <p class="s-label">Who We Are</p>
+        <h2 class="s-h2">A Decade of Gardens Manchester is Proud Of</h2>
+        <p class="s-p">N&N Garden Design has been transforming outdoor spaces across Greater Manchester since 2014. A decade of real work has built us a reputation for doing things right: no shortcuts, no subcontractors, no surprises.</p>
+        <ul class="about-list">
+          <li class="about-item">
+            <div class="about-dot"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <span class="about-item-text">10 years of continuous trading in Greater Manchester. Not a start-up, not a franchise</span>
+          </li>
+          <li class="about-item">
+            <div class="about-dot"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <span class="about-item-text">Every project managed and built by our own in-house team</span>
+          </li>
+          <li class="about-item">
+            <div class="about-dot"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <span class="about-item-text">Fully insured with public liability on every single job</span>
+          </li>
+          <li class="about-item">
+            <div class="about-dot"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <span class="about-item-text">Fixed-price written quotes. The price you agree is the price you pay</span>
+          </li>
+        </ul>
+        <div class="about-cta-row">
+          <a href="#cta-band" class="btn-dark">Get a Free Quote</a>
+          <a href="case-studies.html" class="btn-outline-dark">View Our Work</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section id="why" class="section">
+  <div class="container">
+    <div style="text-align:center;" class="m-hidden" id="why-head">
+      <p class="s-label">Why N&N</p>
+      <h2 class="s-h2">What Sets Us Apart After 10 Years</h2>
+      <p class="s-p" style="max-width:500px; margin:auto;">A decade in the trade teaches you what matters. Here is why homeowners across Greater Manchester keep coming back.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card m-hidden">
+        <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <p class="why-title">Fully Insured on Every Job</p>
+        <p class="why-text">Full public liability insurance on every project. Your home and property are always protected. We will never start without it.</p>
+      </div>
+      <div class="why-card m-hidden">
+        <div class="why-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+        <p class="why-title">Fixed Price Guaranteed</p>
+        <p class="why-text">Our quotes are written, detailed and fixed. No additions on the final day. What we agree is what you pay.</p>
+      </div>
+      <div class="why-card m-hidden">
+        <div class="why-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <p class="why-title">10 Years of Experience</p>
+        <p class="why-text">Not a new company working things out on your property. A decade of real projects means you get experience, not experiments.</p>
+      </div>
+      <div class="why-card m-hidden">
+        <div class="why-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+        <p class="why-title">Spotless Finish Every Time</p>
+        <p class="why-text">We treat every garden as if it were our own. Full clean-up and walkthrough with you before we consider the job done.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process" class="section section-dark">
+  <div class="container">
+    <div style="text-align:center;" class="m-hidden" id="proc-head">
+      <p class="s-label s-label-light">The Process</p>
+      <h2 class="s-h2 s-h2-white">How It Works</h2>
+      <p style="color:rgba(255,255,255,.55); font-size:.9rem; margin-top:.6rem; max-width:460px; margin-left:auto; margin-right:auto; line-height:1.7;">Simple, transparent, professional. From your first call to the finished garden.</p>
+    </div>
+    <div class="process-grid">
+      <div class="process-card m-hidden">
+        <div class="process-num">01</div>
+        <p class="process-title">Free Consultation</p>
+        <p class="process-text">We visit your property, look at the space and listen to what you want. No charge, no pressure, no obligation.</p>
+      </div>
+      <div class="process-card m-hidden">
+        <div class="process-num">02</div>
+        <p class="process-title">Detailed Quote</p>
+        <p class="process-text">A clear, itemised written quote within 48 hours. Fixed price, fully explained, no hidden extras.</p>
+      </div>
+      <div class="process-card m-hidden">
+        <div class="process-num">03</div>
+        <p class="process-title">Professional Build</p>
+        <p class="process-text">Our own team arrives on the agreed date. Right materials, right skills, minimum disruption.</p>
+      </div>
+      <div class="process-card m-hidden">
+        <div class="process-num">04</div>
+        <p class="process-title">Handover &amp; Aftercare</p>
+        <p class="process-text">We walk you through the finished project, clean up completely and make sure you are happy before we leave.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BEFORE & AFTER -->
+<section id="ba" class="section section-alt">
+  <div class="container">
+    <div style="text-align:center; margin-bottom:3rem;" class="m-hidden" id="ba-head">
+      <p class="s-label">Real Results</p>
+      <h2 class="s-h2">Before and After</h2>
+      <p class="s-p" style="max-width:460px; margin:auto;">A sample of what 10 years of experience looks like in practice.</p>
+    </div>
+    <div class="ba-grid">
+      <div class="ba-imgs m-hidden" id="ba-imgs-el">
+        <div class="ba-img">
+          <img id="ba-before" src="645695617_1813769050035269_2943509378683416176_n.jpg" alt="Before" loading="lazy">
+          <span class="ba-lbl">Before</span>
+        </div>
+        <div class="ba-img">
+          <img id="ba-after" src="667607305_1846699816742192_3731434200883009783_n.jpg" alt="After" loading="lazy">
+          <span class="ba-lbl">After</span>
+        </div>
+      </div>
+      <div class="ba-story m-hidden" id="ba-story-el">
+        <p class="ba-cl">Client's Challenge</p>
+        <p class="ba-ct" id="ba-text">The garden had been neglected for years. Overgrown, uneven ground, crumbling patio and no usable outdoor space. The homeowner wanted a complete transformation they could actually use.</p>
+        <div class="ba-rev">
+          <p class="ba-q" id="ba-quote">"Norbert and his team turned our disaster of a garden into something we are genuinely proud of. Finished on time, exactly as quoted, and the quality is brilliant."</p>
+          <p class="ba-who" id="ba-who">Sarah T., Salford</p>
+        </div>
+        <div class="ba-nav">
+          <button class="ba-btn" onclick="baMove(-1)" aria-label="Previous">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <button class="ba-btn" onclick="baMove(1)" aria-label="Next">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+          <span class="ba-counter" id="ba-counter">1 / 3</span>
+          <a href="case-studies.html" class="ba-view-link">View all projects <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AREAS -->
+<section id="areas" class="section">
+  <div class="container">
+    <div class="m-hidden" id="areas-head">
+      <p class="s-label">Where We Work</p>
+      <h2 class="s-h2">Covering Greater Manchester</h2>
+      <p class="s-p" style="max-width:520px;">Based in Greater Manchester, we travel across the whole region. If you are within the area below, we can come to you for a free consultation.</p>
+    </div>
+    <div class="areas-grid m-hidden" id="areas-pills">
+      <span class="area-pill">Manchester City Centre</span>
+      <span class="area-pill">Salford</span>
+      <span class="area-pill">Trafford</span>
+      <span class="area-pill">Stretford</span>
+      <span class="area-pill">Sale</span>
+      <span class="area-pill">Altrincham</span>
+      <span class="area-pill">Eccles</span>
+      <span class="area-pill">Irlam</span>
+      <span class="area-pill">Worsley</span>
+      <span class="area-pill">Bolton</span>
+      <span class="area-pill">Bury</span>
+      <span class="area-pill">Rochdale</span>
+      <span class="area-pill">Oldham</span>
+      <span class="area-pill">Stockport</span>
+      <span class="area-pill">Cheadle</span>
+      <span class="area-pill">Didsbury</span>
+      <span class="area-pill">Chorlton</span>
+      <span class="area-pill">Wythenshawe</span>
+      <span class="area-pill">Tameside</span>
+      <span class="area-pill">Ashton-under-Lyne</span>
+      <span class="area-pill">Leigh</span>
+      <span class="area-pill">Wigan</span>
+    </div>
+    <p style="color:var(--tl); font-size:.8rem; margin-top:1.1rem;">Not sure? Call <a href="tel:+447435725296" style="color:var(--ga); font-weight:600;">+44 7435 725296</a> and we will let you know.</p>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="section section-dark">
+  <div class="container">
+    <div style="text-align:center;" class="m-hidden" id="testi-head">
+      <p class="s-label s-label-light">What Clients Say</p>
+      <h2 class="s-h2 s-h2-white">Trusted by Homeowners Across Manchester</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card m-hidden">
+        <div class="testi-quote-mark">"</div>
+        <p class="testi-q">Brilliant team from start to finish. The new decking area has completely transformed our back garden. Norbert kept us in the loop the whole time and the price was exactly as quoted. Absolutely delighted.</p>
+        <p class="testi-name">Mark H.</p>
+        <p class="testi-loc">Stretford, Manchester</p>
+      </div>
+      <div class="testi-card m-hidden">
+        <div class="testi-quote-mark">"</div>
+        <p class="testi-q">Had a full resin driveway done and it looks incredible. Neat, tidy and they left everything spotless when they finished. Would use N&N again without hesitation. Highly recommended.</p>
+        <p class="testi-name">Julie P.</p>
+        <p class="testi-loc">Eccles, Salford</p>
+      </div>
+      <div class="testi-card m-hidden">
+        <div class="testi-quote-mark">"</div>
+        <p class="testi-q">Got three quotes and N&N were not the cheapest, but by far the most professional. The porcelain patio is stunning. Completed in three days, not a speck of mess left behind. Worth every penny.</p>
+        <p class="testi-name">David and Claire R.</p>
+        <p class="testi-loc">Sale, Trafford</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="section section-alt">
+  <div class="container">
+    <div style="text-align:center; margin-bottom:.5rem;" class="m-hidden" id="faq-head">
+      <p class="s-label">Common Questions</p>
+      <h2 class="s-h2">Frequently Asked Questions</h2>
+      <p class="s-p" style="max-width:480px; margin:auto;">10 years in the trade means we have heard every question. Here are the ones that come up most.</p>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-item m-hidden"><button class="faq-q" onclick="toggleFaq(this)">How long does a typical project take? <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-a">It depends on scope. A standard deck or patio usually takes 2 to 4 days. A full driveway 3 to 5 days. A complete garden makeover 1 to 2 weeks. We always give you a clear timeline before we start.</div></div>
+      <div class="faq-item m-hidden"><button class="faq-q" onclick="toggleFaq(this)">Do you offer a written guarantee? <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-a">Yes. We stand behind everything we build. If there is ever an issue with our workmanship, we will come back and sort it. We have been doing this for 10 years and our reputation is built on getting it right the first time.</div></div>
+      <div class="faq-item m-hidden"><button class="faq-q" onclick="toggleFaq(this)">Are you fully insured? <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-a">Absolutely. Full public liability insurance on every single project. You can ask to see the certificate before we start. We will never arrive on site without it.</div></div>
+      <div class="faq-item m-hidden"><button class="faq-q" onclick="toggleFaq(this)">Will I need planning permission? <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-a">For most residential garden work, planning permission is not required. Some projects near boundaries or involving structures above a certain height may need it. We will flag any concerns during the consultation.</div></div>
+      <div class="faq-item m-hidden"><button class="faq-q" onclick="toggleFaq(this)">How much does landscaping cost? <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-a">Every project is different. A small patio can start from around &pound;1,500. A full garden transformation can be &pound;15,000 or more. The only way to give you an accurate price is to see the space. Our consultation and quote are completely free.</div></div>
+      <div class="faq-item m-hidden"><button class="faq-q" onclick="toggleFaq(this)">Do you use subcontractors? <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-a">No. Every project is carried out by our own in-house team. Consistent quality, direct accountability, no strangers turning up at your home. You meet us at quote stage and we are the same people who do the work.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section id="cta-band">
+  <div class="container">
+    <h2 class="m-hidden" id="cta-h2">Ready to Transform Your Garden?</h2>
+    <p class="m-hidden" id="cta-p">Call today for a free, no-obligation consultation anywhere across Greater Manchester.</p>
+    <a href="tel:+447435725296" class="btn-cta-big m-hidden" id="cta-btn">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 6.29 6.29l1.63-1.63a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      +44 7435 725296
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="container">
+    <div class="ft-grid">
+      <div>
+        <div class="ft-logo-box">
+          <img src="logo.jpg" alt="N&N Garden Design" class="ft-logo">
+        </div>
+        <p class="ft-tag">10 years of expert landscaping and garden design across Greater Manchester. Built by our own team, finished to the highest standard.</p>
+      </div>
+      <div>
+        <p class="ft-h">Services</p>
+        <ul class="ft-ul">
+          <li><a href="#services">Decking</a></li>
+          <li><a href="#services">Driveways</a></li>
+          <li><a href="#services">Flagging &amp; Paving</a></li>
+          <li><a href="#services">Fencing &amp; Pergolas</a></li>
+          <li><a href="#services">Turfing</a></li>
+          <li><a href="#services">Garden Makeovers</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="ft-h">Quick Links</p>
+        <ul class="ft-ul">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="case-studies.html">Case Studies</a></li>
+          <li><a href="#areas">Areas Covered</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#cta-band">Get a Quote</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="ft-h">Contact</p>
+        <span class="ft-line"><a href="tel:+447435725296">+44 7435 725296</a></span>
+        <span class="ft-line"><a href="mailto:norbertliska74@gmail.com">norbertliska74@gmail.com</a></span>
+        <span class="ft-line">Greater Manchester, UK</span>
+        <div style="margin-top:1rem; font-size:.73rem; color:rgba(255,255,255,.28);">Mon &ndash; Sat: 7am &ndash; 6pm</div>
+      </div>
+    </div>
+    <div class="ft-bot">
+      <p class="ft-copy">&copy; 2025 N&N Garden Design. All rights reserved.</p>
+      <p class="ft-copy">Greater Manchester's Trusted Landscapers Since 2014</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Motion One -->
+<script src="https://cdn.jsdelivr.net/npm/motion@10.16.4/dist/motion.min.js"></script>
+<script>
+  const { animate, inView, stagger } = Motion;
+  const ease = [0.22, 1, 0.36, 1]; // expo ease-out — smooth, Framer-like
+
+  /* ── NAV scroll shadow ── */
+  window.addEventListener('scroll', () => {
+    document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 8);
+  }, { passive: true });
+
+  /* ── HERO entrance — staggered spring ── */
+  const heroEls = ['#h-pill','#h-loc','#h-head','#h-rule','#h-sub','#h-ctas','#h-stats'];
+  heroEls.forEach((sel, i) => {
+    const el = document.querySelector(sel);
+    if (!el) return;
+    animate(el,
+      { opacity: [0, 1], y: [22, 0] },
+      { duration: 0.7, delay: 0.08 + i * 0.1, easing: ease }
+    );
+  });
+  // Hero image slides in from right
+  animate('.hero-right',
+    { opacity: [0, 1], x: [30, 0] },
+    { duration: 0.9, delay: 0.25, easing: ease }
+  );
+
+  /* ── STATS BAR — fade in + count up ── */
+  inView('#stats-bar', () => {
+    animate('.stat-item',
+      { opacity: [0, 1], y: [24, 0] },
+      { delay: stagger(0.1), duration: 0.65, easing: ease }
+    );
+    document.querySelectorAll('.stat-num[data-count]').forEach((el, i) => {
+      const target = +el.dataset.count;
+      const suffix = el.dataset.suffix || '';
+      const prefix = el.dataset.prefix || '';
+      if (target === 0) { el.textContent = prefix + '0' + suffix; return; }
+      const duration = 1400;
+      const start = performance.now() + i * 100;
+      function tick(now) {
+        const elapsed = Math.max(0, now - start);
+        const progress = Math.min(elapsed / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        el.textContent = prefix + Math.round(eased * target) + suffix;
+        if (progress < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    });
+  }, { amount: 0.4 });
+
+  /* ── SERVICES ── */
+  inView('#services', () => {
+    animate('#srv-head', { opacity: [0, 1], y: [18, 0] }, { duration: 0.6, easing: ease });
+    animate('.srv-card',
+      { opacity: [0, 1], y: [36, 0] },
+      { delay: stagger(0.07), duration: 0.65, easing: ease }
+    );
+  }, { amount: 0.1 });
+
+  /* ── ABOUT — split slide in ── */
+  inView('#about', () => {
+    animate('#about-img', { opacity: [0, 1], x: [-36, 0] }, { duration: 0.8, easing: ease });
+    animate('#about-text', { opacity: [0, 1], x: [36, 0] }, { duration: 0.8, delay: 0.12, easing: ease });
+  }, { amount: 0.2 });
+
+  /* ── WHY CARDS ── */
+  inView('#why', () => {
+    animate('#why-head', { opacity: [0, 1], y: [18, 0] }, { duration: 0.6, easing: ease });
+    animate('.why-card',
+      { opacity: [0, 1], y: [30, 0] },
+      { delay: stagger(0.09), duration: 0.65, easing: ease }
+    );
+  }, { amount: 0.15 });
+
+  /* ── PROCESS — left to right sequence ── */
+  inView('#process', () => {
+    animate('#proc-head', { opacity: [0, 1], y: [18, 0] }, { duration: 0.6, easing: ease });
+    animate('.process-card',
+      { opacity: [0, 1], y: [24, 0] },
+      { delay: stagger(0.12), duration: 0.65, easing: ease }
+    );
+  }, { amount: 0.2 });
+
+  /* ── BEFORE & AFTER — split slide ── */
+  inView('#ba', () => {
+    animate('#ba-head', { opacity: [0, 1], y: [18, 0] }, { duration: 0.6, easing: ease });
+    animate('#ba-imgs-el', { opacity: [0, 1], x: [-28, 0] }, { duration: 0.75, delay: 0.1, easing: ease });
+    animate('#ba-story-el', { opacity: [0, 1], x: [28, 0] }, { duration: 0.75, delay: 0.18, easing: ease });
+  }, { amount: 0.2 });
+
+  /* ── AREAS — fade up ── */
+  inView('#areas', () => {
+    animate('#areas-head', { opacity: [0, 1], y: [18, 0] }, { duration: 0.6, easing: ease });
+    animate('#areas-pills', { opacity: [0, 1], y: [14, 0] }, { duration: 0.65, delay: 0.15, easing: ease });
+  }, { amount: 0.2 });
+
+  /* ── TESTIMONIALS ── */
+  inView('#testimonials', () => {
+    animate('#testi-head', { opacity: [0, 1], y: [18, 0] }, { duration: 0.6, easing: ease });
+    animate('.testi-card',
+      { opacity: [0, 1], y: [28, 0] },
+      { delay: stagger(0.1), duration: 0.65, easing: ease }
+    );
+  }, { amount: 0.2 });
+
+  /* ── FAQ ── */
+  inView('#faq', () => {
+    animate('#faq-head', { opacity: [0, 1], y: [18, 0] }, { duration: 0.6, easing: ease });
+    animate('.faq-item',
+      { opacity: [0, 1], y: [18, 0] },
+      { delay: stagger(0.07), duration: 0.55, easing: ease }
+    );
+  }, { amount: 0.1 });
+
+  /* ── CTA BAND ── */
+  inView('#cta-band', () => {
+    animate('#cta-h2', { opacity: [0, 1], y: [18, 0] }, { duration: 0.6, easing: ease });
+    animate('#cta-p',  { opacity: [0, 1], y: [14, 0] }, { duration: 0.6, delay: 0.1, easing: ease });
+    animate('#cta-btn',{ opacity: [0, 1], scale: [0.96, 1] }, { duration: 0.6, delay: 0.2, easing: ease });
+  }, { amount: 0.4 });
+
+  /* ── FAQ accordion ── */
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+
+  /* ── Before & After slider ── */
+  const slides = [
+    { before:'645695617_1813769050035269_2943509378683416176_n.jpg', after:'667607305_1846699816742192_3731434200883009783_n.jpg', text:"The garden had been neglected for years. Overgrown, uneven ground, crumbling patio and no usable outdoor space. The homeowner wanted a complete transformation.", quote:"Norbert and his team turned our disaster of a garden into something we are genuinely proud of. Finished on time, exactly as quoted, and the quality is brilliant.", who:'Sarah T., Salford' },
+    { before:'495383136_1548837099861800_4034982553883827243_n.jpg', after:'518288706_1604815784263931_1950754593204641827_n.jpg', text:"Old cracked concrete driveway that had seen better days. The homeowners wanted something modern and low-maintenance that would add real kerb appeal.", quote:"The resin driveway is absolutely stunning. Transformed the whole front of the house. Neat, professional and finished exactly on schedule.", who:'James K., Trafford' },
+    { before:'658036559_1841055257306648_2499244485532896337_n.jpg', after:'661456609_1846700196742154_2534703908444904172_n.jpg', text:"A back garden with no usable outdoor space. The family wanted somewhere for the children and somewhere to sit out in the evenings during summer.", quote:"Completely changed how we use our garden. The decking and artificial grass look amazing. Great communication throughout and top quality work.", who:'Emma L., Salford' }
+  ];
+  let cur = 0;
+  function baMove(dir) {
+    cur = (cur + dir + slides.length) % slides.length;
+    const s = slides[cur];
+    const beforeImg = document.getElementById('ba-before');
+    const afterImg  = document.getElementById('ba-after');
+    animate([beforeImg, afterImg], { opacity: [1, 0] }, { duration: 0.2 }).then(() => {
+      beforeImg.src = s.before; afterImg.src = s.after;
+      animate([beforeImg, afterImg], { opacity: [0, 1] }, { duration: 0.3, easing: ease });
+    });
+    document.getElementById('ba-text').textContent  = s.text;
+    document.getElementById('ba-quote').textContent = '“' + s.quote + '”';
+    document.getElementById('ba-who').textContent   = s.who;
+    document.getElementById('ba-counter').textContent = (cur + 1) + ' / ' + slides.length;
+  }
+</script>
+
+<!-- ── CHAT WIDGET ── -->
+<div id="root"></div>
+<script type="module" src="chat-assets/index-vqgFfl-j.js"></script>
+</body>
+</html>
